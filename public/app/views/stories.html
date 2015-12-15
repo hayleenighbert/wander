@@ -1,4 +1,4 @@
-<h1>Stories</h1>
+<!-- <h1>Stories</h1>
 
 <a href="/storys/new" class="btn btn-success">New Story</a>
 
@@ -12,3 +12,18 @@
   <a ng-href="/storys/{{story._id}}">Img</a>
   <a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
 </div>
+ -->
+
+   <timeline>
+    <timeline-story ng-repeat="story in storys">
+      <timeline-badge class="{{story.badgeClass}}">
+        <i class="glyphicon {{story.badgeIconClass}}"></i>
+      </timeline-badge>
+      <timeline-panel class="{{story.badgeClass}}">
+        <timeline-heading>
+          <h4>{{story.title}}</h4>
+        </timeline-heading>
+        <p>{{story.description}}</p>
+      </timeline-panel>
+    </timeline-story>
+  </timeline>

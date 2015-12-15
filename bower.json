@@ -1,0 +1,24 @@
+{
+  "name": "wander",
+  "description": "travel story app",
+  "main": "index.js",
+  "authors": [
+    "Haylee Nighbert"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "travel"
+  ],
+  "homepage": "https://github.com/hayleenighbert/wander",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-timeline": "~1.6.1"
+  }
+}

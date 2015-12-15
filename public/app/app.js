@@ -1,4 +1,4 @@
-var app = angular.module('WanderApp', ['ngRoute', 'WanderCtrls', "WanderServices"]);
+var app = angular.module('WanderApp', ['ngRoute', 'WanderCtrls', 'WanderServices', 'angular-timeline']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
