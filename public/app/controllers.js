@@ -11,7 +11,7 @@ angular.module('WanderCtrls', ['WanderServices'])
 
   $scope.deleteStory = function(id, storysIdx) {
     Story.delete({id: id}, function success(data) {
-      $scope.Storys.splice(storysIdx, 1);
+      $scope.storys.splice(storysIdx, 1);
     }, function error(data) {
       console.log(data);
     });
@@ -30,7 +30,7 @@ angular.module('WanderCtrls', ['WanderServices'])
   $scope.story = {
     title: '',
     description: '',
-    imglink: '',
+    image: ''
   };
 
   $scope.createStory = function() {

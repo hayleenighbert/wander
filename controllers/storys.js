@@ -1,39 +1,39 @@
 var express = require('express');
-var Item = require('../models/story');
+var Story = require('../models/story');
 var router = express.Router();
 
 router.route('/')
- .get(function(req, res) {
-   Item.find(function(err, items) {
-     if (err) return res.status(500).send(err);
-     res.send(items);
-   });
- })
- .post(function(req, res) {
-   Item.create(req.body, function(err, item) {
-     if (err) return res.status(500).send(err);
-     res.send(item);
-   });
- });
+  .get(function(req, res) {
+    Story.find(function(err, storys) {
+      if (err) return res.status(500).send(err);
+      res.send(storys);
+    });
+  })
+  .post(function(req, res) {
+    Story.create(req.body, function(err, story) {
+      if (err) return res.status(500).send(err);
+      res.send(story);
+    });
+  });
 
 router.route('/:id')
- .get(function(req, res) {
-   Item.findById(req.params.id, function(err, item) {
-     if (err) return res.status(500).send(err);
-     res.send(item);
-   });
- })
- .put(function(req, res) {
-   Item.findByIdAndUpdate(req.params.id, req.body, function(err) {
-     if (err) return res.status(500).send(err);
-     res.send({'message': 'success'});
-   });
- })
- .delete(function(req, res) {
-   Item.findByIdAndRemove(req.params.id, function(err) {
-     if (err) return res.status(500).send(err);
-     res.send({'message': 'success'});
-   });
- });
+  .get(function(req, res) {
+    Story.findById(req.params.id, function(err, story) {
+      if (err) return res.status(500).send(err);
+      res.send(story);
+    });
+  })
+  .put(function(req, res) {
+    Story.findByIdAndUpdate(req.params.id, req.body, function(err) {
+      if (err) return res.status(500).send(err);
+      res.send({'message': 'success'});
+    });
+  })
+  .delete(function(req, res) {
+    Story.findByIdAndRemove(req.params.id, function(err) {
+      if (err) return res.status(500).send(err);
+      res.send({'message': 'success'});
+    });
+  });
 
 module.exports = router;

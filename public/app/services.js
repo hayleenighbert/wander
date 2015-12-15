@@ -2,7 +2,7 @@
 
 angular.module('WanderServices', ['ngResource'])
 .factory('Story', ['$resource', 'Auth', function($resource, Auth) {
-  return $resource('http://localhost:3000/api/items/:id');
+  return $resource('http://localhost:3000/api/storys/:id');
 }])
 //newfactory
 .factory("Auth", ["$window", function($window) {
@@ -10,13 +10,13 @@ angular.module('WanderServices', ['ngResource'])
 		saveToken: function(token) {
 			//with localStorage you can take it as a hash map
 			//saves arbitrary things on the user's computer
-			$window.localStorage["wander-token"] = token;
+			$window.localStorage["secretstory-token"] = token;
 		},
 		getToken: function() {
-			return $window.localStorage["wander-token"];
+			return $window.localStorage["secretstory-token"];
 		},
 		removeToken: function() {
-			$window.localStorage.removeItem("wander-token");
+			$window.localStorage.removeItem("secretstory-token");
 		},
 		isLoggedIn: function() {
 			var token = this.getToken();
@@ -28,7 +28,6 @@ angular.module('WanderServices', ['ngResource'])
 .factory("AuthInterceptor", ["Auth", function(Auth) {
 	return {
 		request: function(config) {
-			console.log("something");
 			var token = Auth.getToken();
 			if (token) {
 				config.headers.Authorization = "Bearer "+token;

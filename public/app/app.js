@@ -4,27 +4,27 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
 
   $routeProvider
   .when('/', {
-    // templateUrl: '../index.html',
+    templateUrl: 'app/views/wander.html',
     controller: 'HomeCtrl'
   })
-  // .when('/recipes/new', {
-  //   templateUrl: '../views/newRecipe.html',
-  //   controller: 'NewCtrl'
-  // })
-  // .when('/recipes/:id', {
-  //   templateUrl: '../views/showRecipe.html',
-  //   controller: 'ShowCtrl'
-  // })
+  .when('/storys/new', {
+    templateUrl: 'app/views/newStory.html',
+    controller: 'NewCtrl'
+  })
+  .when('/storys/:id', {
+    templateUrl: 'app/views/showStory.html',
+    controller: 'ShowCtrl'
+  })
   .when('/login', {
-    // templateUrl: '../views/userLogin.html',
+    templateUrl: 'app/views/userLogin.html',
     controller: 'LoginCtrl'
   })
   .when('/signup', {
-  // templateUrl: '../views/userLogin.html',
+  templateUrl: 'app/views/userLogin.html',
   controller: 'SignupCtrl'
   })
   .otherwise({
-    templateUrl: '../views/404.html'
+    templateUrl: 'app/views/404.html'
   });
 
   $locationProvider.html5Mode(true);

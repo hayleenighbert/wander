@@ -1,0 +1,28 @@
+body {
+
+	font-family: 'Raleway', sans-serif;
+	color: black;
+}
+
+/*.navbar {
+	font-weight: bold;
+	font-color: #009900;
+	text-align: center;
+}*/
+
+
+.well {
+	background-color: #ffffcc;
+	border: 1px solid black;
+	margin: 30px;
+}
+
+.container {
+	margin: 30px;
+	padding: 20px;
+    background-color: #ffffff;
+}
+
+.btn {
+	font-size: 14px;
+}

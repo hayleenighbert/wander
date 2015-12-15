@@ -1,0 +1,18 @@
+<h1>New Story</h1>
+
+<form ng-submit="createStory()">
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" ng-model="story.title">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" id="description" ng-model="story.description"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="image">Image Link</label>
+    <input type="url" class="form-control" id="image" placeholder="" ng-model="story.image">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

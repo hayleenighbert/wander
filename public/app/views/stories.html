@@ -1,0 +1,14 @@
+<h1>Stories</h1>
+
+<a href="/storys/new" class="btn btn-success">New Story</a>
+
+<div class="form-group">
+  <label for="search">Search</label>
+  <input type="text" class="form-control" id="search" ng-model="search">
+</div>
+
+<div class="well" ng-repeat="story in storys | filter:{title:search} track by story._id">
+  <h1>{{story.name}}</h1>
+  <a ng-href="/storys/{{story._id}}">Img</a>
+  <a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+</div>
