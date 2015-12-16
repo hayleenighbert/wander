@@ -34,6 +34,7 @@ angular.module('WanderCtrls', ['WanderServices'])
     description: '',
     image: ''
   };
+  
   $scope.uploadPhoto = function(){
     cloudinary.openUploadWidget({ cloud_name: 'dkvjhgv6a', upload_preset: 'jwkvojrr'},
     function(error, result) {

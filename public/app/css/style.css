@@ -73,7 +73,7 @@ body {
 	font-size: 14px;
 }
 
-.parallax-container {
+.parallax {
   min-height: 380px;
   line-height: 0;
   height: auto;
