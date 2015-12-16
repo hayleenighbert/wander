@@ -23,6 +23,7 @@ body {
 .header-text {
 	font-family: 'Raleway', sans-serif;
 	text-align: center;
+	letter-spacing: 20px;
 	margin: auto 0;
 	vertical-align: center;
 	font-size: 110px;
@@ -37,7 +38,7 @@ body {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
-    scrollwheel: false;
+    pointer-events: none;
 }
 
 .Flexible-container iframe,   
@@ -70,4 +71,47 @@ body {
 
 .btn {
 	font-size: 14px;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  color: #000000;
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  color: #000000;
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+.fa-cog {
+  color: #000000;
 }
