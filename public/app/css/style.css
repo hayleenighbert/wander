@@ -55,8 +55,7 @@ body {
 }
 
 .container {
-	padding: 20px;
-	width: 800px;
+	width: 100%;
     background-color: #ffffff;
 }
 
