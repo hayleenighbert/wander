@@ -1,7 +1,7 @@
 body {
 	font-family: 'Raleway', sans-serif;
 	color: black;
-	background-image: url("http://i.imgur.com/8SkzSvM.jpg");
+	background-image: url("");
 	/*background-color: black;*/
 	/*position: absolute;*/
 	background-repeat: no-repeat;
@@ -29,139 +29,37 @@ body {
 	color: navy;
 }
 
+/* Flexible iFrame */
+
+.Flexible-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.Flexible-container iframe,   
+.Flexible-container object,  
+.Flexible-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .well {
 	background-color: #ffffcc;
 	margin: 30px;
 }
 
 .container {
-	float:center;
 	padding: 20px;
-	margin: auto 0;
 	width: 800px;
     background-color: #ffffff;
 }
 
 .btn {
 	font-size: 14px;
-}
-
-/*
-required css to make things work
-*/
-
-.parallax-section {
-
-	/* position relative is needed as a references for child element positions */
-
-	position: relative;
-
-	/* zindex needed to put content in front of the images */
-
-	z-index: 1;
-
-}
-
-
-.mr-px-img {
-
-	/* This container is needed for cropping and image positioning if parallax fx is disabled */
-
-	width: 100%;
-	height: 100%;
-
-	position: absolute;
-	top: 0px;
-	left: 0px;
-
-	display: block;
-	overflow: hidden;
-
-	z-index: -999;
-
-	padding: 0;
-	margin: 0;
-
-}
-
-.mr-px-img img {
-
-	/* basic scaling and positioning rules which will be overwriten by javascript */
-
-	position: absolute;
-	top: 0px;
-	left: 0px;
-
-	width: 100%;
- 	height: auto;
-
-}
-
-
-
-
-/*
-css for demo
-*/
-
-html, body{
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-.parallax-section {
-
-	padding: 60px;
-
-}
-
-.parallax-section p {
-
-	font-size: 14px;
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-align: center;
-	letter-spacing: 5px;
-	
-}
-
-.section1 {
-
-	padding-top: 150px;
-	padding-bottom: 150px;
-	margin-top: 80px;
-
-	color: #fff;
-
-}
-
-.section2 {
-
-	padding-top: 200px;
-	padding-bottom: 200px;
-
-}
-
-.section3 {
-
-	color: #fff;
-
-}
-
-.section4 {
-
-	padding-top: 100px;
-	padding-bottom: 100px;
-
-	color: #fff;
-
-}
-
-.section5 {
-	
-	padding-top: 100px;
-	padding-bottom: 800px;
-
 }
