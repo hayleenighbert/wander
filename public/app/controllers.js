@@ -9,6 +9,8 @@ angular.module('WanderCtrls', ['WanderServices'])
     console.log(data)
   });
 
+
+
   $scope.deleteStory = function(id, storysIdx) {
     Story.delete({id: id}, function success(data) {
       $scope.storys.splice(storysIdx, 1);
@@ -39,8 +41,17 @@ angular.module('WanderCtrls', ['WanderServices'])
     }, function error(data) {
       console.log(data);
     });
+    cloudinary.openUploadWidget({ cloud_name: 'dkvjhgv6a', upload_preset: 'jwkvojrr'},
+    function(error, result) {
+    $scope.$apply(function(){
+    $scope.imageUploadUrl = result[0].secure_url;
+    });
+  });
   }
 }])
+
+
+
 //inject scope and auth
 .controller('NavCtrl', ['$scope', 'Auth', function($scope, Auth) {
   $scope.logout = function() {

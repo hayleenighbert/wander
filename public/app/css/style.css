@@ -1,8 +1,18 @@
 body {
-
 	font-family: 'Raleway', sans-serif;
 	color: black;
+	background-image: url("http://i.imgur.com/8SkzSvM.jpg");
+	/*background-color: black;*/
+	/*position: absolute;*/
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-position: center center;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	background-size: cover;
 }
+
+
 
 /*.navbar {
 	font-weight: bold;
@@ -10,16 +20,25 @@ body {
 	text-align: center;
 }*/
 
+.header-text {
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+	margin: auto 0;
+	vertical-align: center;
+	font-size: 110px;
+	color: navy;
+}
 
 .well {
 	background-color: #ffffcc;
-	border: 1px solid black;
 	margin: 30px;
 }
 
 .container {
-	margin: 30px;
+	float:center;
 	padding: 20px;
+	margin: auto 0;
+	width: 800px;
     background-color: #ffffff;
 }
 

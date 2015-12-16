@@ -1,5 +1,4 @@
 <h1>New Story</h1>
-
 <form ng-submit="createStory()">
   <div class="form-group">
     <label for="title">Title</label>
@@ -14,5 +13,6 @@
     <input type="url" class="form-control" id="image" placeholder="" ng-model="story.image">
   </div>
 
+  <a ng-click="uploadPhoto()" return false>Upload Photo</a>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
