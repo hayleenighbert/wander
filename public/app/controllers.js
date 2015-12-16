@@ -34,6 +34,14 @@ angular.module('WanderCtrls', ['WanderServices'])
     description: '',
     image: ''
   };
+  $scope.uploadPhoto = function(){
+    cloudinary.openUploadWidget({ cloud_name: 'dkvjhgv6a', upload_preset: 'jwkvojrr'},
+    function(error, result) {
+      $scope.$apply(function(){
+      $scope.imageUploadUrl = result[0].secure_url;
+      });
+    })
+  };
 
   $scope.createStory = function() {
     Story.save($scope.story, function success(data) {
@@ -41,12 +49,7 @@ angular.module('WanderCtrls', ['WanderServices'])
     }, function error(data) {
       console.log(data);
     });
-    cloudinary.openUploadWidget({ cloud_name: 'dkvjhgv6a', upload_preset: 'jwkvojrr'},
-    function(error, result) {
-    $scope.$apply(function(){
-    $scope.imageUploadUrl = result[0].secure_url;
-    });
-  });
+      
   }
 }])
 

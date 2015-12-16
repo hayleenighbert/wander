@@ -8,8 +8,14 @@ var app = express();
 var secret = "tellyourstory";
 
 var mongoose = require('mongoose');
+var uriUtil = require('mongodb-uri');
+var mongodbUri = process.env['MONGOLAB_URI'];
+var mongooseUri = uriUtil.formatMongoose(mongodbUri);
 var User = require('./models/user');
-mongoose.connect('mongodb://localhost/storys');
+mongoose.connect(mongooseUri || 'mongodb://localhost/storys');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));

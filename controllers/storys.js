@@ -10,6 +10,7 @@ router.route('/')
     });
   })
   .post(function(req, res) {
+    console.log(req.body)
     Story.create(req.body, function(err, story) {
       if (err) return res.status(500).send(err);
       res.send(story);
