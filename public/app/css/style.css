@@ -27,58 +27,122 @@ body {
 	font-size: 14px;
 }
 
+/*
+required css to make things work
+*/
 
-.parallax-container {
-  min-height: 380px;
-  line-height: 0;
-  height: auto;
-  color: rgba(255,255,255,.9);
-}
-  .parallax-container .section {
-    width: 100%;
-  }
+.parallax-section {
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
+	/* position relative is needed as a references for child element positions */
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
+	position: relative;
 
-.icon-block {
-  color: #000000;
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  color: #000000;
-  font-size: inherit;
-}
+	/* zindex needed to put content in front of the images */
 
-footer.page-footer {
-  margin: 0;
-}
+	z-index: 1;
 
-.fa-cog {
-  color: #000000;
 }
 
 
-.icon::before {
-    display: inline-block;
-    margin-right: .5em;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
+.mr-px-img {
+
+	/* This container is needed for cropping and image positioning if parallax fx is disabled */
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	display: block;
+	overflow: hidden;
+
+	z-index: -999;
+
+	padding: 0;
+	margin: 0;
+
+}
+
+.mr-px-img img {
+
+	/* basic scaling and positioning rules which will be overwriten by javascript */
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 100%;
+ 	height: auto;
+
+}
+
+
+
+
+/*
+css for demo
+*/
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+.parallax-section {
+
+	padding: 60px;
+
+}
+
+.parallax-section p {
+
+	font-size: 14px;
+	font-family: 'Helvetica Neue', Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 5px;
+	
+}
+
+.section1 {
+
+	padding-top: 150px;
+	padding-bottom: 150px;
+	margin-top: 80px;
+
+	color: #fff;
+
+}
+
+.section2 {
+
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+}
+
+.section3 {
+
+	color: #fff;
+
+}
+
+.section4 {
+
+	padding-top: 100px;
+	padding-bottom: 100px;
+
+	color: #fff;
+
+}
+
+.section5 {
+	
+	padding-top: 100px;
+	padding-bottom: 800px;
+
 }
