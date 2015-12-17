@@ -2,7 +2,7 @@
 
 angular.module('WanderServices', ['ngResource'])
 .factory('Story', ['$resource', 'Auth', function($resource, Auth) {
-  return $resource('http://localhost:3000/api/storys/:id');
+  return $resource('/api/storys/:id');
 }])
 //newfactory
 .factory("Auth", ["$window", function($window) {

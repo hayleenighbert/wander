@@ -19,6 +19,7 @@ router.route('/')
 
 router.route('/:id')
   .get(function(req, res) {
+    console.log("Are we here?");
     Story.findById(req.params.id, function(err, story) {
       if (err) return res.status(500).send(err);
       res.send(story);
