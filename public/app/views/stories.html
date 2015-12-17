@@ -1,29 +1,21 @@
+<ng-controller="ShowCtrl">
 <h1>Stories</h1>
 
 <a href="/storys/new" class="btn btn-success">New Story</a>
 
-<div class="form-group">
-  <label for="search">Search</label>
-  <input type="text" class="form-control" id="search" ng-model="search">
+<div class="well" ng-repeat="story in storys | filter:{title:search} track by story.id">
+  <h1>{{story.title}}</h1>
+
+<a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-left"></a>
 </div>
 
-<div class="well" ng-repeat="story in storys | filter:{title:search} track by story._id">
-  <h1>{{story.name}}</h1>
-  <a ng-href="/storys/{{story._id}}">Img</a>
-  <a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right"></a>
+<h1>{{story.location}}</h1>
+
+<div class="well">
+  <p>
+    {{story.description}}
+  </p>
+  <img class="img-responsive" ng-src="{{story.imageUploadUrl}}">
 </div>
 
-
-<!--    <timeline>
-    <timeline-story ng-repeat="story in storys">
-      <timeline-badge class="{{story.badgeClass}}">
-        <i class="glyphicon {{story.badgeIconClass}}"></i>
-      </timeline-badge>
-      <timeline-panel class="{{story.badgeClass}}">
-        <timeline-heading>
-          <h4>{{story.title}}</h4>
-        </timeline-heading>
-        <p>{{story.description}}</p>
-      </timeline-panel>
-    </timeline-story>
-  </timeline> -->
+<a href="/" class="btn btn-primary">&larr; Back</a>

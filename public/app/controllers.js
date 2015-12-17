@@ -45,7 +45,7 @@ angular.module('WanderCtrls', ['WanderServices'])
 
   $scope.createStory = function() {
     Story.save($scope.story, function success(data) {
-      $location.path('/storys/stories');
+      $location.path('/storys/'+data._id);
     }, function error(data) {
       console.log(data);
     });
