@@ -10,7 +10,6 @@ angular.module('WanderCtrls', ['WanderServices'])
   });
 
 
-
   $scope.deleteStory = function(id, storysIdx) {
     Story.delete({id: id}, function success(data) {
       $scope.storys.splice(storysIdx, 1);
@@ -31,8 +30,9 @@ angular.module('WanderCtrls', ['WanderServices'])
 .controller('NewCtrl', ['$scope', '$location', 'Story', function($scope, $location, Story) {
   $scope.story = {
     title: '',
+    location: '',
     description: '',
-    image: ''
+    imageUploadUrl: ''
   };
   
   $scope.uploadPhoto = function(){
@@ -46,7 +46,7 @@ angular.module('WanderCtrls', ['WanderServices'])
 
   $scope.createStory = function() {
     Story.save($scope.story, function success(data) {
-      $location.path('/');
+      $location.path('/stories');
     }, function error(data) {
       console.log(data);
     });

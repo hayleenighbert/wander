@@ -7,17 +7,18 @@
     <label for="title">Title</label>
     <input type="text" class="form-control" id="title" ng-model="story.title">
   </div>
+    <div class="form-group">
+    <label for="location">Location</label>
+    <input type="text" class="form-control" id="location" ng-model="story.location">
+  </div>
   <div class="form-group">
     <label for="description">Description</label>
     <textarea class="form-control" id="description" ng-model="story.description"></textarea>
   </div>
-  <div class="form-group">
-    <label for="image">Image Link</label>
-    <input type="url" class="form-control" id="image" placeholder="" ng-model="story.image">
-  </div>
 
   <a ng-click="uploadPhoto()" return false>Upload Photo</a>
 </form>
+<br>
 
   <button type="submit" class="btn btn-primary" align="center">Submit</button>
-</div>
+</div></br>
