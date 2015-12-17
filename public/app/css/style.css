@@ -12,6 +12,13 @@ body {
   	background-size: cover;
 }
 
+p {
+  font-size: 18px;
+  margin-top: 25px;
+  line-height: 25px;
+  text-align: left;
+}
+
 
 
 /*.navbar {
@@ -33,7 +40,7 @@ body {
 	padding: 10px;
 	margin: auto 0;
 	vertical-align: center;
-	font-size: 110px;
+	font-size: 95px;
 	color: navy;
 }
 
@@ -55,7 +62,7 @@ body {
   padding: 10px;
   margin: auto 0;
   vertical-align: center;
-  font-size: 55px;
+  font-size: 36px;
   color: navy;
 }
 
@@ -83,16 +90,19 @@ body {
 .well {
 	background-color: #212121;
 	margin: 30px;
+  padding: 50px;
   color: white;
   text-align: center;
   vertical-align: center;
   margin: auto 0;
+  width: 800px;
   padding: 20px;
 }
 
 .container {
 	padding: 20px;
   background-color: #ffffff;
+  width:800px;
 }
 
 .location {

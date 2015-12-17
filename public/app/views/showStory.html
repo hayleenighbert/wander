@@ -1,15 +1,15 @@
 <ng-controller="ShowCtrl">
 	<div class="header-text2">{{story.title}}</div>
-	<div class="container" ng-repeat="story in storys | filter:{title:search} track by story.id">
-	<a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-left"></a>
+		<div class="container" ng-repeat="story in storys | filter:{title:search} track by story.id">
 	</div>
-
-<div class="location">{{story.location}}</div>
-
-<div class="well">
-    {{story.description}}
-  <center><img class="img-responsive" ng-src="{{story.imageUploadUrl}}" width="1000px"></center>
-</div>
+	<center>
+	<div class="container">
+		<div class="location"><i class="fa fa-map-pin"></i><br>{{story.location}}</div>
+			<center>
+			<div class="well">
+				<img class="img-responsive" ng-src="{{story.imageUploadUrl}}" width="100%">
+				<p>{{story.description}}</p></center>
+			</div>
 
 <center><a href="javascript:history.back()" text-align="center" class="btn btn-primary">&larr; Back</a>
 <a href="/" class="btn btn-primary">Home</a>
