@@ -12,7 +12,7 @@ var uriUtil = require('mongodb-uri');
 var mongodbUri = process.env['MONGOLAB_URI'];
 var mongooseUri = uriUtil.formatMongoose(mongodbUri);
 var User = require('./models/user');
-mongoose.connect(mongooseUri || 'mongodb://localhost/storys');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/storys');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 
