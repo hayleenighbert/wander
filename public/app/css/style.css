@@ -37,6 +37,28 @@ body {
 	color: navy;
 }
 
+.header-text2 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 10px;
+  margin: auto 0;
+  vertical-align: center;
+  font-size: 55px;
+  color: navy;
+}
+
+.header-text3 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 10px;
+  margin: auto 0;
+  vertical-align: center;
+  font-size: 55px;
+  color: navy;
+}
+
 .Flexible-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -59,12 +81,13 @@ body {
 
 
 .well {
-	background-color: navy;
+	background-color: #212121;
 	margin: 30px;
-  font-color: white;
+  color: white;
   text-align: center;
   vertical-align: center;
-  width: 200px;
+  margin: auto 0;
+  padding: 20px;
 }
 
 .container {
@@ -72,11 +95,18 @@ body {
   background-color: #ffffff;
 }
 
+.location {
+  padding: 20px;
+  font-size: 28px;
+  text-align: center;
+}
+
 .btn {
 	font-size: 14px;
   text-align: center;
   vertical-align: center;
   background-color:navy;
+  margin: 10px;
 }
 
 .index-banner {

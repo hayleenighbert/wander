@@ -1,12 +1,17 @@
-<div class="container">
-<h1>{{story.title}}</h1>
+<ng-controller="ShowCtrl">
+	<div class="header-text2">{{story.title}}</div>
+	<div class="container" ng-repeat="story in storys | filter:{title:search} track by story.id">
+	<a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-left"></a>
+	</div>
+
+<div class="location">{{story.location}}</div>
 
 <div class="well">
-  <p>
     {{story.description}}
-  </p>
-  <img class="img-responsive" ng-src="{{story.image}}">
-</div>
+  <center><img class="img-responsive" ng-src="{{story.imageUploadUrl}}" width="1000px"></center>
 </div>
 
-<a href="/" class="btn btn-primary">&larr; Back</a>
+<center><a href="javascript:history.back()" text-align="center" class="btn btn-primary">&larr; Back</a>
+<a href="/" class="btn btn-primary">Home</a>
+<a href="/storys/new" class="btn btn-success">New Story</a>
+</div>
