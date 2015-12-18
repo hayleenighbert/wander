@@ -30,5 +30,7 @@ Next challenges:
 - Creating with ionic on mobile
 
 Built by Haylee Nighbert for General Assembly's Web Development Immersive Project.
-[GitHub](https://www.github.com/hayleenighbert)
-[LinkedIn](https://www.linkedin.com/in/hayleenoelle)
+
+*[GitHub](https://www.github.com/hayleenighbert)
+
+*[LinkedIn](https://www.linkedin.com/in/hayleenoelle)
