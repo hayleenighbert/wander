@@ -5,11 +5,11 @@ body {
 	/*background-color: black;*/
 	/*position: absolute;*/
 	background-repeat: no-repeat;
-  	background-attachment: fixed;
-  	background-position: center center;
-  	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
 p {
@@ -19,15 +19,37 @@ p {
   text-align: left;
 }
 
-.navbar {
+#trash {
+  background-color: black;
+  border-radius: 0px;
+  color: white;
     -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-    -webkit-border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    border-radius: 0 !important;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
 }
 
+.trashcontainer {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  padding:10px;
+  margin: 5px;
+}
+
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  border-radius: 0 !important;
+  background: -moz-linear-gradient(left top,  #fff 0%, #31C2C4 100%); 
+  background: -webkit-linear-gradient(left top,  #fff 0%,#31C2C4 100%);
+  background: linear-gradient(to bottom right,  #fff 0%,#31C2C4 100%);
+}
 
 .fa {
   color: navy;

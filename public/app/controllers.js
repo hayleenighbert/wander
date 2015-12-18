@@ -27,6 +27,22 @@ angular.module('WanderCtrls', ['WanderServices'])
     console.log(data);
   });
 }])
+.controller('ShowAllCtrl', ['$scope', '$routeParams', 'Story', function($scope, $routeParams, Story) {
+  $scope.story = {};
+
+  Story.query(function success(data) {
+    $scope.storys = data;
+  }, function error(data) {
+    console.log(data);
+  });
+    $scope.deleteStory = function(id, storysIdx) {
+    Story.delete({id: id}, function success(data) {
+      $scope.storys.splice(storysIdx, 1);
+    }, function error(data) {
+      console.log(data);
+    });
+  }
+}])
 .controller('NewCtrl', ['$scope', '$location', 'Story', function($scope, $location, Story) {
   $scope.story = {
     title: '',

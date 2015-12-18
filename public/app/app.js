@@ -18,6 +18,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/showStory.html',
     controller: 'ShowCtrl'
   })
+  .when('/passport', {
+    templateUrl: 'app/views/passport.html',
+    controller: 'ShowAllCtrl'
+  })
   .when('/login', {
     templateUrl: 'app/views/userLogin.html',
     controller: 'LoginCtrl'
