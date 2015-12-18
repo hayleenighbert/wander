@@ -23,9 +23,6 @@ p {
   border-radius: 0px;
   color: navy;
   width: 20px
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -92,7 +89,7 @@ p {
   padding: 10px;
   margin: auto 0;
   vertical-align: center;
-  font-size: 24px;
+  font-size: 16px;
   color: navy;
 }
 
