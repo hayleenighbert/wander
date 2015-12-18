@@ -10,6 +10,8 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 p {
@@ -247,4 +249,8 @@ footer.page-footer {
   animation-delay: 1.6s;
 }
 
+.fade-top {
+  from {top:0px; opacity: 0;}
+  to {top:200px; opacity: 1;}
+}
 /*---make a basic box ---*/
