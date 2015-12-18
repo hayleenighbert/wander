@@ -21,6 +21,8 @@ This app will keep track of photos, destinations, and also includes an interacti
 * jwt auth tokens
 * Cloudinary API (for image uploads)
 * jQuery
+* Keyframe animations
+* Font awesome icons
 
 
 Next challenges:
@@ -31,6 +33,5 @@ Next challenges:
 
 Built by Haylee Nighbert for General Assembly's Web Development Immersive Project.
 
-*[GitHub](https://www.github.com/hayleenighbert)
-
-*[LinkedIn](https://www.linkedin.com/in/hayleenoelle)
+- [GitHub](https://www.github.com/hayleenighbert)
+- [LinkedIn](https://www.linkedin.com/in/hayleenoelle)
