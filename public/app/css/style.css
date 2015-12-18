@@ -19,13 +19,15 @@ p {
   text-align: left;
 }
 
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
 
-
-/*.navbar {
-	font-weight: bold;
-	font-color: #009900;
-	text-align: center;
-}*/
 
 .fa {
   color: navy;

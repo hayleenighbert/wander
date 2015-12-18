@@ -11,6 +11,9 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/newStory.html',
     controller: 'NewCtrl'
   })
+  .when('/about', {
+    templateUrl: 'app/views/about.html'
+  })
   .when('/storys/:id', {
     templateUrl: 'app/views/showStory.html',
     controller: 'ShowCtrl'
