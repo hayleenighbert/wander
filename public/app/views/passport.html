@@ -2,10 +2,11 @@
     <div class="header-text">Passport</div>
 
 <div class="row">
-  <div class="col-md-4" ng-repeat="story in storys  track by $index" ng-href="{{story._id}}">
+  <div class="col-md-4" ng-repeat="story in storys  track by $index">
 <!--   <a ng-href="{{story.permalink}}" target="_blank"><h1>{{recipe.name}}</h1></a><br> -->
-    <h4>{{story.title}}</h4>
-      <img id="img" class="img-responsive" ng-src="{{story.imageUploadUrl}}" border="10px">
-    <a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right" id="trash"></a>
+    <div class="header-text3">{{story.title}}</div>
+        <a ng-href="/storys/{{story._id}}"><img id="img" class="img-thumbnail" ng-src="{{story.imageUploadUrl}}"></a>
+        <a ng-click="deleteStory(story._id, $index)" class="btn btn-danger glyphicon glyphicon-trash pull-right" id="trash"></a>
+      </div>
   </div>
 </div>

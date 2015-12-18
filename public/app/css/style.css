@@ -20,15 +20,18 @@ p {
 }
 
 #trash {
-  background-color: black;
   border-radius: 0px;
   color: white;
+  width: 20px
     -webkit-box-shadow: 0 8px 6px -6px #999;
   -moz-box-shadow: 0 8px 6px -6px #999;
   box-shadow: 0 8px 6px -6px #999;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
+  background: -moz-linear-gradient(left top,  #fff 0%, #C43331 100%); 
+  background: -webkit-linear-gradient(left top,  #fff 0%,#C43331 100%);
+  background: linear-gradient(to bottom right,  #fff 0%,#C43331 100%);
 }
 
 .trashcontainer {
@@ -40,9 +43,6 @@ p {
 }
 
 .navbar {
-  -webkit-box-shadow: 0 8px 6px -6px #999;
-  -moz-box-shadow: 0 8px 6px -6px #999;
-  box-shadow: 0 8px 6px -6px #999;
   -webkit-border-radius: 0 !important;
   -moz-border-radius: 0 !important;
   border-radius: 0 !important;
@@ -82,11 +82,11 @@ p {
 .header-text3 {
   font-family: 'Raleway', sans-serif;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 2px;
   padding: 10px;
   margin: auto 0;
   vertical-align: center;
-  font-size: 36px;
+  font-size: 24px;
   color: navy;
 }
 
@@ -136,11 +136,30 @@ p {
 }
 
 .btn {
-	font-size: 14px;
-  text-align: center;
-  vertical-align: center;
-  background-color:navy;
-  margin: 10px;
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #31C2C4;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #31C2C4;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #31C2C4;
+    box-shadow: none;
 }
 
 .index-banner {
