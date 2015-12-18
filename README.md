@@ -23,6 +23,7 @@ This app will keep track of photos, destinations, and also includes an interacti
 * jQuery
 * Keyframe animations
 * Font awesome icons
+* Bootstrap
 
 
 Next challenges:
