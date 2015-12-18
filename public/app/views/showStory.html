@@ -1,5 +1,5 @@
 <ng-controller="ShowCtrl">
-	<div class="header-text2">{{story.title}}</div>
+	<div class="fade-in"><div class="header-text2">{{story.title}}</div></div>
 		<div class="container" ng-repeat="story in storys | filter:{title:search} track by story.id">
 	</div>
 	<center>
@@ -11,7 +11,7 @@
 				<p>{{story.description}}</p></center>
 			</div>
 
-<center><a href="javascript:history.back()" text-align="center" class="btn btn-primary">&larr; Back</a>
-<a href="/" class="btn btn-primary">Home</a>
-<a href="/storys/new" class="btn btn-primary">New Story</a>
+	<center><a href="javascript:history.back()" text-align="center" class="btn btn-primary">&larr; Back</a>
+		<a href="/" class="btn btn-primary">Home</a>
+			<a href="/storys/new" class="btn btn-primary">New Story</a>
 </div>
