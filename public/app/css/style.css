@@ -21,6 +21,17 @@ p {
   text-align: left;
 }
 
+h1 {
+  padding:15px;
+
+}
+
+h2 {
+  font-size: 16px;
+  text-align: center;
+  padding: 15px;
+}
+
 #trash {
   border-radius: 0px;
   color: navy;
